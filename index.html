@@ -31,15 +31,80 @@
             color: white;
         }
 
-        /* 文章內容 */
+        /* 文章區塊 */
         #content {
             margin-left: 20%;
             padding: 20px;
         }
         
+        /* 文章內容 */
         .article {
             max-width: 720px;
             margin: auto;
+        }
+
+        /* 書本容器 */
+        .book-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 書本圖片 */
+        .book {
+            max-width: 25%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        /* 書本標題 */
+        .book-title {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 作者介紹區塊 */
+        .card {
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* 作者介紹上半部 */
+        .card-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        /* 作者大頭貼 */
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        /* 作者姓名 */
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 作者介紹下半部 */
+        .card-body {
+            padding: 20px;
+        }
+
+        /* 作者描述區塊 */
+        .card-body p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
         }
 
         /* 共用按鈕樣式 */
@@ -91,20 +156,63 @@
             background-color: #e60000;
         }
 
+        /* 改變網頁底色 */
+        .change-background {
+            background-color: #f5f5f5;
+        }
+
+        /* 改變文字樣式為斜體 */
+        .change-font-style {
+            font-style: italic;
+        }
+
+        /* 改變文字大小 */
         .change-font-size {
             font-size: 22px;
         }
 
+        /* 改變文字字體 */
         .change-font-family {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
+        /* 改變文字顏色 */
         .change-text-color {
             color: #999;
         }
 
+        /* 改變段落外距 */
         .change-padding {
             padding: 20px;
+        }
+        
+        /* 改變段落背景顏色 */
+        .change-paragraph-background {
+            background-color: #bfbfbf;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        /* 翻轉書封面 */
+        .flip-image {
+            transform: scaleX(-1);
+        }
+        
+        /* 將書標題加上底線 */
+        .change-book-title {
+            text-decoration: underline;
+        }
+
+        /* 改變作者背景顏色 */
+        .change-card-background {
+            background-color: #FFE4E1 !important;
+        }
+
+        .different {
+            background-color: #e60000;
+            border: 5px solid white;
+            outline: solid 10px black;
+            outline-offset: -12px;
         }
     </style>
 </head>
@@ -123,13 +231,14 @@
         <div class="article">
             <h1 id="title">培養興趣三部曲</h1>
             <p id="font-size">有些孩子給他什麼都興趣缺缺；有些孩子則興趣廣泛到無以復加。然而，人的時間與精力都有限，如何啟動孩子的興趣，持續滋養，幫助他找到終其一生的熱愛？</p>
-            <img src="https://image-resizer.parenting.com.tw/resize/uri/https%3A%2F%2Fcp.cw1.tw%2Ffiles%2Fmd5%2F4a%2Ff8%2F4af8c12091f7f2e7cda4350291dd934f-9171892.jpg/?w=800&format=webp" alt="培養興趣三部曲" style="width: 100%;"/>
+            <img id="img-src" src="https://image-resizer.parenting.com.tw/resize/uri/https%3A%2F%2Fcp.cw1.tw%2Ffiles%2Fmd5%2F4a%2Ff8%2F4af8c12091f7f2e7cda4350291dd934f-9171892.jpg/?w=800&format=webp" alt="培養興趣三部曲" style="width: 100%;"/>
+            <img id="add-img" src="https://image-resizer.parenting.com.tw/resize/uri/https%3A%2F%2Fcp.cw1.tw%2Ffiles%2Fmd5%2F1b%2F61%2F1b61c09ee124ab0c23890c5cdddf020b-779062.png/?w=800&format=webp" alt="培養興趣三部曲" style="width: 100%; display: none;" />
             <p id="font-family">其實，興趣在不同年紀對生涯選擇的影響比重大不同。問孩子長大後想做什麼？四～九歲的孩子最常說長大要當警察、開怪手，開花店、麵包店。再問為什麼？答案多半是，警察很厲害、怪手好大，花很漂亮、麵包好吃。這時候的孩子被稱為「幻想期」，因為自我了解不夠多，價值觀有待建立，「想做什麼」主要來自對工作世界的片面認知。十～十二歲是「興趣期」，這時期的孩子對現實的理解不足，能力、性格、價值觀也還不穩定，喜不喜歡做什麼倒是很清楚，因此興趣佔生涯想像的最大部分。</p>
             <img src="https://cp.cw1.tw/files/md5/90/41/90411b07d4039bbb494042f1a24fbd02-50264.jpg" alt="培養興趣三部曲" style="max-width: 100%;" />
             <p id="text-color">到了十三～十五歲，課業上的優劣勢逐漸明顯，加上對外在世界有稍微的了解，便轉向以能力為主要考量的「能力期」。譬如這時候如果孩子數學不好，就不太可能立志要當科學家。國中到高中這階段有了初步的分流，對自己、職業世界也有更進一步的理解。若就讀職業學校，藉由實習課程，就能更明確知道該領域的走向；選擇高中的孩子則需要進行更多對自我以及對職業世界的探索，才能粗略選擇生涯方向，這就是所謂的「初探期」。</p>
             <p id="padding">儘管「興趣」在各成長階段的佔比不盡相同，而且，隨著年紀增長，能力將逐漸成為職業選擇、生涯規劃的主要考量。但個人的性格特質、價值觀、興趣都應納入考慮，否則即使合乎能力，還是會不快樂，或感嘆「這不是我要的」。</p>
             <h2 id="section1">興趣的四大功能</h2>
-            <p>興趣與工作有關，可稱為職業興趣；與工作無關，則稱為休閒興趣，其間差別可從興趣的四大功能來看：（1） 做為發展專業知識的基礎。如：有些喜歡天文、昆蟲或歷史地理的孩子，可能因經常接觸相關活動而發展為職業興趣，鑽研這些領域的專業知識。（2） 做為發展專業技能的基礎。像學音樂、美術或體育，本來是興趣，隨著功力加深，就有可能轉換至專業技能的跑道。（3） 成為提升生活品質的休閒娛樂。像「集郵」這樣的興趣要發展成職業相對困難，卻能豐富生活的內涵。（4） 提供修復身心的良方。畢竟人是完整的個體，工作再有興趣也有疲憊的時候，因為有壓力，所以身心都需要修復。休閒興趣，雖與職業無關，卻是生涯和生活重要的一環。</p>
+            <p id="paragraph">興趣與工作有關，可稱為職業興趣；與工作無關，則稱為休閒興趣，其間差別可從興趣的四大功能來看：（1） 做為發展專業知識的基礎。如：有些喜歡天文、昆蟲或歷史地理的孩子，可能因經常接觸相關活動而發展為職業興趣，鑽研這些領域的專業知識。（2） 做為發展專業技能的基礎。像學音樂、美術或體育，本來是興趣，隨著功力加深，就有可能轉換至專業技能的跑道。（3） 成為提升生活品質的休閒娛樂。像「集郵」這樣的興趣要發展成職業相對困難，卻能豐富生活的內涵。（4） 提供修復身心的良方。畢竟人是完整的個體，工作再有興趣也有疲憊的時候，因為有壓力，所以身心都需要修復。休閒興趣，雖與職業無關，卻是生涯和生活重要的一環。</p>
             <h2 id="section2">「興趣」發展三部曲</h2>
             <p>興趣如此重要，應如何幫助孩子發展興趣呢？</p>
             <h2 id="section3">首部曲  探索──從廣到深</h2>
@@ -146,6 +255,25 @@
             <p>（1） 訂定短中長程目標。巧妙運用考試、檢定、競賽、表演，甚至觀摩別人的學習成果，都能發揮自我激勵的作用。（2） 訂定目標完成時間表。找一位指導老師或前輩，討論完成每個階段目標的進度，也可以請指導者定期檢查你的進度，提供回饋意見。（3） 養成習慣。鼓勵孩子安排固定時間練習投入興趣，以養成習慣，一旦習慣夠深刻，就可以放手讓孩子自己掌握。</p>
             <p>才藝的層級一般可以分為初學者、中級、高級、專業水準與大師級。休閒興趣只要能保持在中級，也就是可以自學的程度，其實就已經非常足夠了。</p>
             <p>十二年國教啟動之後，學習緊箍咒將逐漸鬆綁，學習機會也會更多元。父母一定要為孩子留白，讓孩子有足夠的時間來耕耘興趣，持續養成習慣，發展成長遠的興趣，追求一生的熱愛。（採訪整理│江美滿）</p>
+            <div class="book-container">
+                <img src="https://ec-cdn.parenting.com.tw/%E8%A6%AA%E5%AD%90%E5%A4%A9%E4%B8%8B%E5%87%BA%E7%89%88%E7%AB%A5%E6%9B%B8/9786263050655_%E7%AB%8B%E9%AB%94%E5%B0%81%E9%9D%A2.jpg" alt="教出科學探究力" id="book" class="book">
+                <div class="book-title">
+                    <p id="book-title">教出科學探究力</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="card">
+                    <img src="https://cp.cw1.tw/files/md5/18/9b/189bc892308250bae70cc1e666375c84-14495.jpg" alt="Author Avatar" class="avatar" id="avatar">
+                    <div class="header-text">
+                        <h2 id="author-name">楊俐容</h2>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p id="author-description">
+                        親職教育專家
+                    </p>
+                </div>
+            </div>              
         </div>
     </div>
 
@@ -162,13 +290,13 @@
                 // 取消預設行為，即點擊連結不跳轉頁面
                 event.preventDefault();
 
-                // 從連結中獲取目標 id
+                // 從連結中取得目標 id
                 var targetId = this.getAttribute("href");
 
-                // 獲取目標元素
+                // 取得目標元素
                 var targetElement = document.querySelector(targetId);
 
-                // 計算目標元素相對於文檔頂部的距離
+                // 計算目標元素相對於網頁頂部的距離
                 var targetPosition = targetElement.offsetTop;
 
                 // 滾動到目標位置
@@ -177,44 +305,92 @@
                     behavior: "smooth"
                 });
 
-                // 取消所有連結的 active 樣
+                // 取消所有連結的 active 樣式
                 for (var j = 0; j < links.length; j++) {
                     links[j].classList.remove("active");
                 }
 
-                // 將當前連結標記為 active
+                // 將目前連結標記為 active
                 this.classList.add("active");
             });
         }
 
-        // 獲取按鈕元素
+        // 取得按鈕元素
         const button1 = document.getElementById("button1");
         const button2 = document.getElementById("button2");
         const button3 = document.getElementById("button3");
 
+        const body = document.body;
+        const title = document.getElementById("title");
         const fontSize = document.getElementById("font-size");
         const fontFamily = document.getElementById("font-family");
         const textColor = document.getElementById("text-color");
         const padding = document.getElementById("padding");
+        const imgSrc = document.getElementById("img-src");
+        const paragraph = document.getElementById("paragraph");
+        const addImg = document.getElementById("add-img");
+        const book = document.getElementById("book");
+        const bookTitle = document.getElementById("book-title");
+        const avatar = document.getElementById("avatar");
+        const authorName = document.getElementById("author-name");
+        const authorDescription = document.getElementById("author-description");
+        const card = document.getElementById("card");
 
-        // 綁定事件處理函數
+        // 風格1
         button1.addEventListener("click", function() {
+            body.classList.remove("change-background");
+            title.classList.remove("change-font-style");
             fontSize.classList.remove("change-font-size");
             fontFamily.classList.remove("change-font-family");
             textColor.classList.remove("change-text-color");
             padding.classList.remove("change-padding");
+            imgSrc.src = "https://image-resizer.parenting.com.tw/resize/uri/https%3A%2F%2Fcp.cw1.tw%2Ffiles%2Fmd5%2F4a%2Ff8%2F4af8c12091f7f2e7cda4350291dd934f-9171892.jpg/?w=800&format=webp";
+            paragraph.classList.remove("change-paragraph-background");
+            addImg.style.display = 'none';
+            book.classList.remove("flip-image");
+            bookTitle.classList.remove("change-book-title");
+            avatar.src = "https://cp.cw1.tw/files/md5/18/9b/189bc892308250bae70cc1e666375c84-14495.jpg";
+            authorName.innerText = "楊俐容";
+            authorDescription.innerText = "親職教育專家";
+            card.classList.remove("change-card-background");
         });
-
+        
+        // 風格2
         button2.addEventListener("click", function() {
+            body.classList.add("change-background");
+            title.classList.add("change-font-style");
             fontSize.classList.add("change-font-size");
             fontFamily.classList.add("change-font-family");
             textColor.classList.add("change-text-color");
             padding.classList.add("change-padding");
+            imgSrc.src = "https://image-resizer.parenting.com.tw/resize/uri/https%3A%2F%2Fcp.cw1.tw%2Ffiles%2Fmd5%2F2f%2F29%2F2f2959b104e2e2389133593adc31f0b8-222746.jpg/?w=800&format=webp";
+            paragraph.classList.add("change-paragraph-background");
+            addImg.style.display = 'block';
+            book.classList.add("flip-image");
+            bookTitle.classList.add("change-book-title");
+            avatar.src = "https://storage.googleapis.com/publish-parenting-com-tw/Woaq4Ps6M2Qr1fp95unascJEoUJc11iMoW3scsTy.jpeg";
+            authorName.innerText = "小羊貝貝";
+            authorDescription.innerText = "畢業於台灣大學農業經濟研究所。未來Family、嬰兒與母親、風傳媒、媽媽經等專欄作者。";
+            card.classList.add("change-card-background");
         });
 
+        // 顯示差異
         button3.addEventListener("click", function() {
-            // 執行按鈕 3 的功能
-            console.log("按鈕 3 被按下");
+            body.classList.toggle("different");
+            title.classList.toggle("different");
+            fontSize.classList.toggle("different");
+            fontFamily.classList.toggle("different");
+            textColor.classList.toggle("different");
+            padding.classList.toggle("different");
+            imgSrc.classList.toggle("different");
+            paragraph.classList.toggle("different");
+            addImg.classList.toggle("different");
+            book.classList.toggle("different");
+            bookTitle.classList.toggle("different");
+            avatar.classList.toggle("different");
+            authorName.classList.toggle("different");
+            authorDescription.classList.toggle("different");
+            card.classList.toggle("different");
         });
     </script>
 </body>
